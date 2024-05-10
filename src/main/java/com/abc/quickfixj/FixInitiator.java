@@ -159,7 +159,7 @@ public class FixInitiator {
 		}
 	}
 
-	private void sendTestRequest() {
+	public void sendTestRequest() {
 		TestRequest testRequest = new TestRequest();
 		testRequest.getHeader().setString(MsgType.FIELD, MsgType.TEST_REQUEST);
 		testRequest.set(new quickfix.field.TestReqID("TestReqID123")); // Set TestReqID field
