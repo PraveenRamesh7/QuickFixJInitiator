@@ -1,0 +1,98 @@
+20240504-11:19:24: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240504-11:19:24: Session state is not current; resetting FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240504-11:19:24: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240504-11:19:24: Configured socket addresses for session: [/127.0.0.1:12000]
+20240504-11:19:24: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240504-11:19:24.32856=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=087
+20240504-11:28:34: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240504-11:28:34: Session state is not current; resetting FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240504-11:28:34: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240504-11:28:34: Configured socket addresses for session: [/127.0.0.1:12000]
+20240504-11:28:34: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240504-11:28:34.75356=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=090
+20240504-12:16:42: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240504-12:16:42: Session state is not current; resetting FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240504-12:16:42: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240504-12:16:42: Configured socket addresses for session: [/127.0.0.1:12000]
+20240504-12:16:42: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240504-12:16:42.24856=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=086
+20240505-05:23:35: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240505-05:23:35: Session state is not current; resetting FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240505-05:23:35: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240505-05:23:35: Configured socket addresses for session: [/127.0.0.1:12000]
+20240505-05:23:35: MINA session created: local=/127.0.0.1:62722, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:23:35: Disconnecting: Encountered END_OF_STREAM
+20240505-05:23:40: MINA session created: local=/127.0.0.1:62725, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:23:41: Initiated logon request
+20240505-05:23:41: Disconnecting: Encountered END_OF_STREAM
+20240505-05:23:45: MINA session created: local=/127.0.0.1:62727, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:23:46: Initiated logon request
+20240505-05:23:46: Disconnecting: Encountered END_OF_STREAM
+20240505-05:23:50: MINA session created: local=/127.0.0.1:62729, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:23:51: Initiated logon request
+20240505-05:23:51: Disconnecting: Encountered END_OF_STREAM
+20240505-05:31:55: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240505-05:31:55: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240505-05:31:55: Configured socket addresses for session: [/127.0.0.1:12000]
+20240505-05:31:55: MINA session created: local=/127.0.0.1:62877, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:31:55: Disconnecting: Encountered END_OF_STREAM
+20240505-05:32:00: MINA session created: local=/127.0.0.1:62881, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:32:01: Initiated logon request
+20240505-05:32:01: Disconnecting: Encountered END_OF_STREAM
+20240505-05:32:05: MINA session created: local=/127.0.0.1:62886, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:32:06: Initiated logon request
+20240505-05:32:06: Disconnecting: Encountered END_OF_STREAM
+20240505-05:32:11: MINA session created: local=/127.0.0.1:62888, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:12000
+20240505-05:32:11: Initiated logon request
+20240505-05:32:11: Disconnecting: Encountered END_OF_STREAM
+20240505-06:57:02: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240505-06:57:02: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240505-06:57:02: Configured socket addresses for session: [/127.0.0.1:12000]
+20240505-06:57:02: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:57:02: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240505-06:57:02.47156=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=089
+20240505-06:57:07: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:57:12: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:57:17: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:57:22: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:57:27: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:09: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240505-06:58:09: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240505-06:58:09: Configured socket addresses for session: [/127.0.0.1:12000]
+20240505-06:58:09: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:09: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240505-06:58:09.38456=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=100
+20240505-06:58:14: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:19: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:24: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:29: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:34: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:39: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-06:58:44: java.net.ConnectException during connection to /127.0.0.1:12000: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:22: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240505-07:07:22: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240505-07:07:22: Configured socket addresses for session: [/127.0.0.1:9999]
+20240505-07:07:22: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:22: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240505-07:07:22.66456=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=091
+20240505-07:07:27: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:32: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:37: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:42: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:47: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:53: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240505-07:07:58: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240506-03:28:32: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240506-03:28:32: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240506-03:28:32: Configured socket addresses for session: [/127.0.0.1:9999]
+20240506-03:28:32: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240506-03:28:32: No responder, not sending message: 8=FIX.4.29=10035=A34=149=MY-INITIATOR-CLIENT152=20240506-03:28:32.70356=MY-ACCEPTOR-SERVICE98=0108=30141=Y10=086
+20240506-03:28:37: java.net.ConnectException during connection to /127.0.0.1:9999: java.net.ConnectException: Connection refused: no further information (Next retry in 5000 milliseconds)
+20240506-03:28:42: MINA session created: local=/127.0.0.1:54507, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:9999
+20240506-03:28:43: Initiated logon request
+20240506-03:28:43: Disconnecting: Encountered END_OF_STREAM
+20240506-03:28:47: MINA session created: local=/127.0.0.1:54528, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:9999
+20240506-03:28:48: Initiated logon request
+20240506-03:28:48: Disconnecting: Encountered END_OF_STREAM
+20240506-06:06:13: Session FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE schedule is weekly, SUN 00:00:00-UTC - FRI 00:00:00-UTC
+20240506-06:06:13: Created session: FIX.4.2:MY-INITIATOR-CLIENT1->MY-ACCEPTOR-SERVICE
+20240506-06:06:14: Configured socket addresses for session: [/127.0.0.1:9999]
+20240506-06:06:14: MINA session created: local=/127.0.0.1:57288, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:9999
+20240506-06:06:14: Disconnecting: Encountered END_OF_STREAM
+20240506-06:06:19: MINA session created: local=/127.0.0.1:57310, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=/127.0.0.1:9999
+20240506-06:06:20: Initiated logon request
+20240506-06:06:20: Disconnecting: Encountered END_OF_STREAM
