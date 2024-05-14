@@ -23,6 +23,7 @@ import quickfix.SessionID;
 import quickfix.SessionNotFound;
 import quickfix.UnsupportedMessageType;
 import quickfix.field.ApplVerID;
+import quickfix.field.BeginSeqNo;
 import quickfix.field.GapFillFlag;
 import quickfix.field.MsgSeqNum;
 import quickfix.field.MsgType;
@@ -73,30 +74,51 @@ public class Application implements quickfix.Application {
 	public void fromAdmin(Message message, SessionID sessionId)
 			throws FieldNotFound, IncorrectDataFormat, IncorrectTagValue, RejectLogon {
 		log.info("fromAdmin (Initiator) :" +  message);
-		fromAdminMessages.add(message);
-	}
-
-	private void resetSequenceNo(Message message, SessionID sessionId) {
 		try {
-			MsgSeqNum seqNum = new MsgSeqNum();
-			acceptorSeqNo = message.getHeader().getInt(seqNum.getField());
-			log.info("Acceptor Message Sequence Number: " + acceptorSeqNo);
-			if(acceptorSeqNo!=intiatorSeqNo) {
-				Message sequenceResetMessage = createSequenceResetMessage();
+			MsgType msgType = new MsgType();
+			int beginSeqNo = 0;
+			if (message.getHeader().getField(msgType).valueEquals(MsgType.RESEND_REQUEST)) {
+				if (message.isSetField(BeginSeqNo.FIELD)) {
+					beginSeqNo = message.getInt(BeginSeqNo.FIELD);
+					Session.lookupSession(sessionId).setNextSenderMsgSeqNum(beginSeqNo);
+				}
+				Message sequenceResetMessage = createSequenceResetMessage(beginSeqNo);
 				log.info("Reset Sequence " + sequenceResetMessage);
 				sendMessage(sessionId,sequenceResetMessage);
-				log.info("Changing Initiator seq no : " + message +" :: "+ 1);
-				try {
-					Session.lookupSession(sessionId).setNextSenderMsgSeqNum(1);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		} catch (FieldNotFound e) {
+				log.info("Changing Initiator seq no : " + message +" :: "+ beginSeqNo);
+				Session.lookupSession(sessionId).setNextSenderMsgSeqNum(beginSeqNo);
+
+			} 
+		} catch (FieldNotFound fieldNotFound) {
+			fieldNotFound.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
+		fromAdminMessages.add(message);
 	}
+
+//	private void resetSequenceNo(Message message, SessionID sessionId) {
+//		try {
+//			MsgSeqNum seqNum = new MsgSeqNum();
+//			acceptorSeqNo = message.getHeader().getInt(seqNum.getField());
+//			log.info("Acceptor Message Sequence Number: " + acceptorSeqNo);
+//			if(acceptorSeqNo!=intiatorSeqNo) {
+//				Message sequenceResetMessage = createSequenceResetMessage();
+//				log.info("Reset Sequence " + sequenceResetMessage);
+//				sendMessage(sessionId,sequenceResetMessage);
+//				log.info("Changing Initiator seq no : " + message +" :: "+ 1);
+//				try {
+//					Session.lookupSession(sessionId).setNextSenderMsgSeqNum(1);
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		} catch (FieldNotFound e) {
+//			e.printStackTrace();
+//		}
+//
+//	}
 
 	@Override
 	public void toApp(Message message, SessionID sessionId) throws DoNotSend {
@@ -112,11 +134,11 @@ public class Application implements quickfix.Application {
 		fromAppMessages.add(message);
 	}
 
-	private static Message createSequenceResetMessage() {
+	private static Message createSequenceResetMessage(int newSeq) {
 		Message sequenceReset = new Message();
 		sequenceReset.getHeader().setString(MsgType.FIELD, "4"); 
 		sequenceReset.setString(GapFillFlag.FIELD, "Y");
-		sequenceReset.setInt(NewSeqNo.FIELD, 1);
+		sequenceReset.setInt(NewSeqNo.FIELD, newSeq);
 		return sequenceReset;
 	}
 
@@ -129,7 +151,7 @@ public class Application implements quickfix.Application {
 			DataDictionaryProvider dataDictionaryProvider = session.getDataDictionaryProvider();
 			if (dataDictionaryProvider != null) {
 				try {
-					dataDictionaryProvider.getApplicationDataDictionary(getApplVerID(session, message)).validate(message, true);
+					dataDictionaryProvider.getApplicationDataDictionary(getApplVerID(session, message));//.validate(message, true);
 				} catch (Exception e) {
 					LogUtil.logThrowable(sessionID, "Outgoing message failed validation: " + e.getMessage(), e);
 					return;
@@ -181,6 +203,13 @@ public class Application implements quickfix.Application {
 		}
 		return fromAdminMessages.get(fromAdminMessages.size() - 1);
 	}
+	
+	public List<Message> lastFromAdminListMessage() {
+		if (fromAdminMessages.isEmpty()) {
+			return null;
+		}
+		return fromAdminMessages;
+	}
 
 	public Message lastToAppMessage() {
 		if (toAppMessages.isEmpty()) {
@@ -195,6 +224,7 @@ public class Application implements quickfix.Application {
 		}
 		return toAdminMessages.get(toAdminMessages.size() - 1);
 	}
+
 
 	public void onReset(SessionID sessionID) {
 		sessionResets++;
